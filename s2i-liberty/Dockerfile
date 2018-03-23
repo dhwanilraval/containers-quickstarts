@@ -13,14 +13,14 @@ LABEL io.openshift.s2i.scripts-url=image:///usr/local/s2i \
       io.openshift.tags="runner, builder,liberty" \
       io.openshift.s2i.destination="/tmp"
 
-ENV STI_SCRIPTS_PATH="/usr/local/s2i" \ 
-    WORKDIR="/usr/local/workdir" \
-    WLP_DEBUG_ADDRESS="7777" \
-    JOLOKIA_PORT="8778" \
-    ENABLE_DEBUG="false" \ 
-    ENABLE_JOLOKIA="true" \
-    S2I_DESTINATION="/tmp" \
-    JOLOKIA_VERSION="1.3.5"
+ENV STI_SCRIPTS_PATH=/usr/local/s2i \
+    WORKDIR=/usr/local/workdir \
+    WLP_DEBUG_ADDRESS=7777 \
+    JOLOKIA_PORT=8778 \
+    ENABLE_DEBUG=false \ 
+    ENABLE_JOLOKIA=true \
+    S2I_DESTINATION=/tmp \
+    JOLOKIA_VERSION=1.3.5
 
 # Copy the S2I scripts from the specific language image to $STI_SCRIPTS_PATH
 COPY ./s2i/bin/ $STI_SCRIPTS_PATH 
